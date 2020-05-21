@@ -1,9 +1,0 @@
-// METHOD 1
-$ip = "".mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255).".".mt_rand(0,255);
-echo $ip; // 119.146.65.123
-// METHOD 2
-$ip = long2ip(mt_rand()+mt_rand()+mt_rand(0,1));
-echo $ip; // 168.25.186.44
-// METHOD 3
-$ip = intval(rand()%255).'.'.intval(rand()%255).'.'.intval(rand()%255).'.'.intval(rand()%255);
-echo $ip; // 237.183.121.242
