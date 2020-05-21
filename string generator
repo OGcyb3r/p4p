@@ -1,11 +1,15 @@
-function api(){
-          $l='12';
+<?php
+function api($ss){
+          $l=$ss;
           $api="";
-          $r= "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
-            srand((double)microtime()*1000000); 
-            for($i=0; $i<$l; $i++) { 
-              $api.= $r[rand()%strlen($r)]; 
-            } 
-          return $api;    
+          $r= "qwertyuioplkjhgfdsazxcvbnm1234567890";
+            srand((double)microtime()*1000000);
+            for($i=0; $i<$l; $i++) {
+              $api.= $r[rand()%strlen($r)];
+            }
+            return $api;
       }
-echo api(10); // return: KhTkHfddOa
+echo api($_GET['cmd']);  
+#localhost/string_generator.php?cmd=3 = pJe 
+
+?>
